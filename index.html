@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8" />
+<title>Test Melodie</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 2rem;
+    text-align: center;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    background-color: #d87093;
+    color: white;
+    border: none;
+    border-radius: 20px;
+  }
+</style>
+</head>
+<body>
+
+<h1>Test melodia</h1>
+
+<audio id="bgMusic" loop>
+  <source src="/melodia.mp3" type="audio/mpeg" />
+  Browserul tău nu suportă audio.
+</audio>
+
+<button id="toggleMusic">▶️ Pornește melodia</button>
+
+<script>
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('toggleMusic');
+
+  btn.addEventListener('click', () => {
+    audio.play();
+  });
+</script>
+
+</body>
+</html>
